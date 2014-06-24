@@ -121,6 +121,11 @@ section.second {
   #beta2 {
     @include span-columns(8);
     background-color: #aadbf5;
+    > code {
+    display: block;
+    line-height: 2.427em;
+    text-align: center;
+    }
     aside {
       @include span-columns(4 of 8);  
       background-color: #41a8df;
@@ -152,11 +157,47 @@ section.third {
       @include pad();  
       background-color: #41a8df;
     }
-    article {
-      @include span-columns(8);
-      @include reset-display;
-      @include pad(); 
-      background-color: #41a8df;
-    }
+    // article {
+    //   @include span-columns(8);
+    //   // @include reset-display;
+    //   @include pad(); 
+    //   background-color: #41a8df;
+    // }
+  }
+}
+
+section.fourth {
+  @include outer-container;
+  background-color: #d5eefb;
+  margin-bottom: 3em;
+  > code {
+    display: block;
+    line-height: 2.427em;
+    text-align: center;
+  }
+  #alpha4 {
+    @include span-columns(6);
+    @include shift(3);
+    background-color: #aadbf5;
+    margin-right: 0;
+  }
+}
+
+.code {
+  @include outer-container;
+  background-color: #d5eefb;
+  margin-bottom: 3em;
+  > code {
+    display: block;
+    line-height: 2.427em;
+    text-align: center;
+  }
+}
+
+section.fifth {
+  .box {
+      @include span-columns(3);
+      @include omega(4n);
+      background-color: #aadbf5;
   }
 }

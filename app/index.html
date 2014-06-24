@@ -120,7 +120,61 @@
         </article>
       </div>
     </section>
+
+    <h3>Shifting columns</h3>
+    <section class="fourth">
+      <code>@include outer-container;</code>
+      <div id="alpha4">
+        <code>@include span-columns(6);<br>
+          @include shift(3);</code>
+      </div>
+    </section>
    
+    <h3>Automatic Rows</h3>
+    <div class="code">
+        <code>@include outer-container;</code>
+    </div>
+    <section class="fifth">
+        <div class="box">
+            <pre>li.block {
+            @include span-columns(3);
+            @include omega(4n);
+            }</pre>
+        </div>
+        <div class="box">
+            <code>li.block</code>
+        </div>
+        <div class="box">
+            <code>li.block</code>
+        </div>
+        <div class="box">
+            <code>li.block</code>
+        </div>
+        <div class="box">
+            <code>li.block</code>
+        </div>
+        <div class="box">
+            <code>li.block</code>
+        </div>
+        <div class="box">
+            <code>li.block</code>
+        </div>
+        <div class="box">
+            <code>li.block</code>
+        </div>
+        <div class="box">
+            <code>li.block</code>
+        </div>
+        <div class="box">
+            <code>li.block</code>
+        </div>
+        <div class="box">
+            <code>li.block</code>
+        </div>
+        <div class="box">
+            <code>li.block</code>
+        </div>
+    </section>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
