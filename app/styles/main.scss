@@ -104,3 +104,59 @@ section.first {
     background-color: #aadbf5;
   }
 }
+
+section.second {
+  @include outer-container;
+  background-color: #d5eefb;
+  margin-bottom: 3em;
+  > code {
+    display: block;
+    line-height: 2.427em;
+    text-align: center;
+  }
+  #alpha2 {
+    @include span-columns(4);
+    background-color: #aadbf5;
+  }
+  #beta2 {
+    @include span-columns(8);
+    background-color: #aadbf5;
+    aside {
+      @include span-columns(4 of 8);  
+      background-color: #41a8df;
+    }
+    article {
+      @include span-columns(4 of 8);
+      background-color: #41a8df;
+    }
+  }
+}
+
+section.third {
+  @include outer-container;
+  background-color: #d5eefb;
+  margin-bottom: 3em;
+  > code {
+    display: block;
+    line-height: 2.427em;
+    text-align: center;
+  }
+  #dummy {
+    @include span-columns(12);
+    @include row(table);
+    background-color: #aadbf5;
+  }
+  #alpha3 {
+    aside {
+      @include span-columns(4);
+      @include pad();  
+      background-color: #41a8df;
+    }
+    article {
+      @include span-columns(8);
+      @include reset-display;
+      @include pad(); 
+      background-color: #41a8df;
+    }
+  }
+}

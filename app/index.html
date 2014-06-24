@@ -81,6 +81,45 @@
             @include omega();</code>
           </div>
     </section>
+
+    <h3>Nesting Columns</h3>
+    <section class="second">
+        <code>@include outer-container;</code>
+        <div id="alpha2">
+            <code>@include span-columns(4);</code>
+        </div>
+        <div id="beta2">
+            <code class="block">@include span-columns(8);</code>
+            <aside>
+                <code>@include span-columns(4 of 8);</code>
+            </aside>
+            <article>
+                <code>@include span-columns(4 of 8);</code>
+            </article>
+        </div>
+    </section>
+
+    <h3>Table Grid</h3>
+    <section class="third">
+      <code>@include outer-container;</code>
+      <div id="dummy">
+        <code>@include span-columns(12);<br>
+          @include row(table);</code>
+      </div>
+      <div id="alpha3">
+         <aside>
+            <code>@include span-columns(4);<br>@include pad();
+            </code>
+        </aside>
+        <article>
+            <code>
+                @include span-columns(8);<br>
+                @include reset-display;<br>
+                @include pad();<br>
+            </code>
+        </article>
+      </div>
+    </section>
    
 
     <!-- build:js scripts/vendor.js -->
