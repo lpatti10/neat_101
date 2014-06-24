@@ -4,23 +4,103 @@
 
 
 body {
-  background: orange;
+  background: white;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: orange;
+  color: #072f44;
+}
+h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+  text-align: center;
+}
+code {
+  font-size: 12px;
+  line-height: 1.618em;
+  text-align: left;
+}
+* {
+  margin-bottom: 20px;
+}
+section.zero {
+  @include outer-container;
+  background-color: #d5eefb;
+  margin-bottom: 3em;
+  > code {
+    display: block;
+    line-height: 2.427em;
+    text-align: center;
+  }
+  #alpha0 {
+    @include span-columns(6);
+    background-color: #aadbf5;
+  }
+  #beta0 {
+    @include span-columns(6);
+    background-color: #aadbf5;
+  }
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+section.first {
+  @include outer-container;
+  background-color: #d5eefb;
+  margin-bottom: 3em;
+  > code {
+    display: block;
+    line-height: 2.427em;
+    text-align: center;
+  }
+  #alpha {
+    @include span-columns(1);
+    background-color: #aadbf5;
+  }
+  #beta {
+    @include span-columns(11);
+    @include omega();
+    background-color: #aadbf5;
+  }
+  #gamma {
+    @include span-columns(2);
+    background-color: #aadbf5;
+  }
+  #delta {
+    @include span-columns(10);
+    @include omega();
+    background-color: #aadbf5;
+  }
+  #epsilon {
+    @include span-columns(3);
+    background-color: #aadbf5;
+  }
+  #zeta {
+    @include span-columns(9);
+    @include omega();
+    background-color: #aadbf5;
+  }
+  #eta {
+    @include span-columns(4);
+    background-color: #aadbf5;
+  }
+  #theta {
+    @include span-columns(8);
+    @include omega;
+    background-color: #aadbf5;
+  }
+  #iota {
+    @include span-columns(5);
+    background-color: #aadbf5;
+  }
+  #kappa {
+    @include span-columns(7);
+    @include omega;
+    background-color: #aadbf5;
+  }
+  #lambda {
+    @include span-columns(6);
+    background-color: #aadbf5;
+  }
+  #mu {
+    @include span-columns(6);
+    @include omega;
+    background-color: #aadbf5;
   }
 }
